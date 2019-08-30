@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.rbb.dao.RbbUserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.wx.rbb.model.RbbUserInfo" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="bind_phone" property="bindPhone" jdbcType="VARCHAR" />
+    <result column="bind_open_id" property="bindOpenId" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    user_id, bind_phone, bind_open_id
+  </sql>
+</mapper>

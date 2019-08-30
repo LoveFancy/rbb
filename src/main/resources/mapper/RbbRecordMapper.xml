@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wx.rbb.dao.RbbRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.wx.rbb.model.RbbRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="child_id" property="childId" jdbcType="INTEGER" />
+    <result column="empolyee_id" property="empolyeeId" jdbcType="INTEGER" />
+    <result column="recuperate_plan" property="recuperatePlan" jdbcType="VARCHAR" />
+    <result column="emp_remark" property="empRemark" jdbcType="VARCHAR" />
+    <result column="recommend_food" property="recommendFood" jdbcType="VARCHAR" />
+    <result column="avoid_food" property="avoidFood" jdbcType="VARCHAR" />
+    <result column="child_name" property="childName" jdbcType="VARCHAR" />
+    <result column="recuperate_event" property="recuperateEvent" jdbcType="VARCHAR" />
+    <result column="present" property="present" jdbcType="VARCHAR" />
+    <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <result column="stars" property="stars" jdbcType="INTEGER" />
+    <result column="isAppraised" property="isappraised" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.wx.rbb.model.RbbRecord" extends="BaseResultMap" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="appraise" property="appraise" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, user_id, child_id, empolyee_id, recuperate_plan, emp_remark, recommend_food, 
+    avoid_food, child_name, recuperate_event, present, time, stars, isAppraised
+  </sql>
+  <sql id="Blob_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    appraise
+  </sql>
+</mapper>

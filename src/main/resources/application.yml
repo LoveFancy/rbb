@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://47.107.1.149:3306/runbeibei
+      username: root
+      password: 1qaz@WSX
+      initial-size: 10
+      max-active: 50
+      min-idle: 10
+      max-wait: 10
+      validation-query: select user()
+
+logging:
+  level:
+    org.springframework.web: info
+    cn.wx: info
+rbb:
+  wx:
+    appid: appid
+    secret: Secret
+    token: token
+    aesKey: #微信小程序消息服务器配置的EncodingAESKey
+    msgDataFormat: JSON
+
+mybatis:
+  typeAliasesPackage: com.migu.content.*
+  mapperLocations: classpath:mapper/*.xml
+
+
